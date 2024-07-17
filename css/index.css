@@ -205,7 +205,7 @@
 @media (max-width: 600px) {
    
     .hero-bg{
-        background-size: auto;
+        background-size: contain;
         background-color: #43454c;  
     }
    
