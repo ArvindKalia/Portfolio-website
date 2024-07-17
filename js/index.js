@@ -63,7 +63,7 @@ function counterAnimation() {
             if (increment < dataCell) {
                 setTimeout(function () {
                     incrementCounter()
-                }, 150)
+                }, 100)
                 sessionStorage.setItem("scroll_completed","animation")
             }
             else {

@@ -5,7 +5,7 @@
 }
 
 .side-nav {
-    width: 15%;
+    width: 17%;
     height: 100vh;
     background-color: black;
     color: #c5c2c2;
@@ -168,6 +168,11 @@
 }
 
 /* start about-section coding */
+
+.about-section{
+    padding:0 23px;
+}
+
 .detail-image img {
     border-radius: 50%;
     margin-top: 30px;
@@ -205,6 +210,14 @@
 
 /* end fact-section code */
 
+/* start skill section code */
+
+.skills-section{
+    background-color: rgba(173, 177, 184, 0.131);
+}
+
+/* end skill section code */
+
 /* @media (min-width: 990px) {
     .material{
         margin-left:0;
@@ -225,8 +238,10 @@
 
     .hero-bg {
         /* background-size: contain; */
+        background-size: 100%;
         background-color: #43454c;
     }
+    
 
 
     /* .side-nav .top-nav-box .nav-icon-box,
@@ -238,6 +253,25 @@
 
 }
 
+@media (max-width:767px) {
+    .detail-image img {
+        border-radius: 10%;
+        width:50%;
+    }
+    .detail-image {
+        /* border-radius: 0; */
+        /* width:50%; */
+        display: flex;
+        justify-content: center;
+    }
+    .hero-bg .hero-bg-shadow-box .text h1{
+        font-size: 3em;
+    }
+    .hero-bg .hero-bg-shadow-box .text h6{
+        font-size: 1.5em;
+    }
+}
+
 
 
 /* responsive code */
@@ -245,6 +279,7 @@
     .side-nav {
         opacity: 0;
         transition: opacity 0.5s linear;
+        width: auto;
     }
 
     .hero-bg button {
