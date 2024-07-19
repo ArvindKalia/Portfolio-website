@@ -30,20 +30,19 @@ updateTitle()
 
 // start counter code
 
-$(document).ready(function(){
+$(document).ready(function () {
     sessionStorage.removeItem("scroll_completed")
     sessionStorage.removeItem("skillCompleted")
 })
 
 $(document).scroll(function () {
-   if(sessionStorage.getItem("scroll_completed")==null)
-   {
-    let factEl = document.querySelector(".fact-section")
-    let getAttr = factEl.getAttribute("class")
-    if (getAttr.indexOf("animated") != -1) {
-        counterAnimation()
+    if (sessionStorage.getItem("scroll_completed") == null) {
+        let factEl = document.querySelector(".fact-section")
+        let getAttr = factEl.getAttribute("class")
+        if (getAttr.indexOf("animated") != -1) {
+            counterAnimation()
+        }
     }
-   }
 })
 
 function counterAnimation() {
@@ -56,7 +55,7 @@ function counterAnimation() {
             let currentNum = Number(counter.innerText)
             // console.log(typeof(currentNum))
             let dataCell = counter.getAttribute("data-cell")
-            let number = dataCell / 10
+            let number = dataCell / 6
             // console.log(number)
             let increment = Math.floor(number + currentNum)
             // console.log(increment)
@@ -65,7 +64,7 @@ function counterAnimation() {
                 setTimeout(function () {
                     incrementCounter()
                 }, 100)
-                sessionStorage.setItem("scroll_completed","animation")
+                sessionStorage.setItem("scroll_completed", "animation")
             }
             else {
                 counter.innerText = dataCell
@@ -80,33 +79,45 @@ function counterAnimation() {
 
 //start skill section code
 
-$(document).scroll(function(){
-    if(sessionStorage.getItem("skillCompleted")==null)
-    {
-        let skillEl= document.querySelector(".skills-section-animate")
-        let getAttr= skillEl.getAttribute("class")
-        if(getAttr.indexOf("animated")!=-1){
+$(document).scroll(function () {
+    if (sessionStorage.getItem("skillCompleted") == null) {
+        let skillEl = document.querySelector(".skills-section-animate")
+        let getAttr = skillEl.getAttribute("class")
+        if (getAttr.indexOf("animated") != -1) {
             skillAnimation()
         }
     }
 })
 
 
-function skillAnimation(){
-    $(document).ready(function(){
-        let html= $(".html").html();
-        let css= $(".css").html();
-        let javascript= $(".javascript").html();
-        let react= $(".react").html();
-        let node= $(".node").html();
-        let python= $(".python").html();
-        $(".progress-html").animate({width:html},50,function(){
-            $(".progress-css").animate({width:css},50,function(){
-                $(".progress-javascript").animate({width:javascript},50,function(){
-                    $(".progress-react").animate({width:react},50,function(){
-                        $(".progress-node").animate({width:node},50,function(){
-                            $(".progress-python").animate({width:python},50,function(){
-                                sessionStorage.setItem("skillCompleted","done")
+function skillAnimation() {
+    $(document).ready(function () {
+        let html = $(".html").html();
+        let css = $(".css").html();
+        let javascript = $(".javascript").html();
+        let react = $(".react").html();
+        let node = $(".node").html();
+        let python = $(".python").html();
+        let aws = $(".aws").html();
+        let sql = $(".sql").html();
+        let mongo = $(".mongo").html();
+        let express = $(".express").html();
+
+        $(".progress-html").animate({ width: html }, 50, function () {
+            $(".progress-css").animate({ width: css }, 50, function () {
+                $(".progress-javascript").animate({ width: javascript }, 50, function () {
+                    $(".progress-react").animate({ width: react }, 50, function () {
+                        $(".progress-node").animate({ width: node }, 50, function () {
+                            $(".progress-python").animate({ width: python }, 50, function () {
+                                $(".progress-aws").animate({ width: aws }, 50, function () {
+                                    $(".progress-sql").animate({ width: sql }, 50, function () {
+                                        $(".progress-mongo").animate({ width: mongo }, 50, function () {
+                                            $(".progress-express").animate({ width: express }, 50, function () {
+                                                sessionStorage.setItem("skillCompleted", "done")
+                                            })
+                                        })
+                                    })
+                                })
                             })
                         })
                     })
@@ -118,15 +129,15 @@ function skillAnimation(){
 
 //start filter code for portfolio
 
-$(document).ready(function(){
-    $(".nav-box li").each(function(){
-        $(this).click(function(){
-           $(".all").hide();
-           $(".nav-box li").removeClass("active")
-           $(this).addClass("active")
-           let filter= $(this).attr("filter")
-            $("."+filter).each(function(){
-                $("."+filter).show()
+$(document).ready(function () {
+    $(".nav-box li").each(function () {
+        $(this).click(function () {
+            $(".all").hide();
+            $(".nav-box li").removeClass("active")
+            $(this).addClass("active")
+            let filter = $(this).attr("filter")
+            $("." + filter).each(function () {
+                $("." + filter).show()
             })
         })
     })
