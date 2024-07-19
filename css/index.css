@@ -169,8 +169,8 @@
 
 /* start about-section coding */
 
-.about-section{
-    padding:0 23px;
+.about-section {
+    padding: 0 23px;
 }
 
 .detail-image img {
@@ -203,8 +203,9 @@
     margin-top: 8px;
     font-size: 50px;
 }
+
 .fact-section h1 {
-    font-weight: bold ;
+    font-weight: bold;
 }
 
 
@@ -212,11 +213,238 @@
 
 /* start skill section code */
 
-.skills-section{
+.skills-section {
     background-color: rgba(173, 177, 184, 0.131);
 }
 
+.skills-section span {
+    font-weight: bold;
+}
+
+.skills-section .progress {
+    border-radius: 0% !important;
+    height: 10px;
+}
+
+.skills-section .progress-bar {
+    background-color: #149DDD;
+}
+
+
 /* end skill section code */
+
+/* start resume section code */
+
+.resume-section .resume-box {
+    border-left: 2px solid #149DDD;
+    position: relative;
+}
+
+.resume-section .resume-box::before {
+    content: "";
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    border: 2px solid #149DDD;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 0;
+    left: -10px;
+}
+
+.resume-section .resume-box h4 {
+    font-weight: bold;
+}
+
+.resume-section .resume-box p {
+    font-size: 18px;
+    font-style: italic;
+}
+
+.resume-section .resume-box ul li {
+    font-size: 18px;
+}
+
+/* end resume section code */
+
+/* start portfolio section code */
+
+.portfolio-section {
+    background-color: rgba(173, 177, 184, 0.131);
+
+}
+
+.portfolio-section ul .nav-box {
+    display: flex;
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.portfolio-section ul .nav-box li{
+    font-weight: bold;
+    color: #122D52;
+    margin: 0px 20px;
+    cursor: pointer;
+}
+.portfolio-section ul .nav-box li.active{
+    color: #149DDD;
+}
+
+.portfolio-section ul .nav-box li:hover {
+    color: #149DDD;
+}
+
+.portfolio-section .portfolio-box {
+    position: relative;
+}
+
+.portfolio-section .portfolio-box .portfolio-con-box {
+    background-color: rgba(20, 157, 221, 0.545);
+    width: 95.4%;
+    height: 0px;
+    position: absolute;
+    bottom: 0;
+    transition: 0.2s ease-in-out;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+}
+
+.portfolio-section .portfolio-box .portfolio-con-box button {
+    width: 100%;
+    transition: 0.2s ease-in-out;
+}
+
+.portfolio-section .portfolio-box .portfolio-con-box button:hover {
+    background-color: #149DDD;
+}
+
+.portfolio-section .portfolio-box .portfolio-con-box button i {
+    color: #fff;
+    font-size: 22px;
+}
+
+.portfolio-section .portfolio-box:hover .portfolio-con-box {
+    opacity: 1;
+    height: 50px;
+}
+
+.portfolio-section .portfolio-box:hover {
+    filter: brightness(80%);
+}
+
+/* end portfolio section code */
+
+/* start service section code */
+
+.service-section .icon-box{
+    width: 70px;
+    height: 70px;
+    background-color: #149DDD;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.service-section .icon-box i{
+    color: #fff;
+    font-size: 22px;
+}
+.service-section .icon-box:hover i{
+    color: #149DDD;
+}
+.service-section .icon-box:hover{
+    background-color: inherit;
+    border: 2px solid #149DDD;
+    cursor: pointer;
+}
+
+.service-section h3:hover{
+    color: #149DDD;
+}
+
+/* end service section code */
+
+/* start testimonial section code */
+
+.testimonial-section{
+    background-color: rgba(173, 177, 184, 0.131);
+}
+
+.testimonial-section .carousel .carousel-item-box{
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.testimonial-section .carousel .carousel-item-box p{
+    font-family: sans-serif;
+    font-style: italic;
+    text-align: justify;
+}
+
+.testimonial-section .carousel .icon-box i{
+    font-size: 80px;
+    color: #fff;
+    position: relative;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.testimonial-section .carousel .carousel-item img{
+position: relative;
+top: -40px;
+}
+
+.testimonial-section .carousel .carousel-item h5{
+position: relative;
+top: -30px;
+}
+
+.testimonial-section .carousel .carousel-item small{
+position: relative;
+top: -35px;
+margin-bottom: 15px;
+}
+
+
+.testimonial-section .carousel .carousel-indicators button{
+    width: 15px !important;
+    height: 15px !important;
+    border-radius: 50% !important;
+    border: 1px solid #149DDD !important;
+
+}
+.testimonial-section .carousel .carousel-indicators button.active{
+    background-color: #149DDD;
+
+}
+
+
+/* end testimonial section code */
+
+/* start contact section code */
+
+.contact-section .icon-box i{
+    padding: 20px;
+    font-size: 30px;
+    background-color: rgba(20, 157, 221, 0.207);
+    color: #149DDD;
+    border-radius: 50%;
+    transition: 0.4s ease-in-out;
+}
+.contact-section .icon-box i:hover{
+    background-color: #149DDD;
+    color: #fff;
+}
+
+.contact-section label{
+    font-size: 22px;
+    font-family: sans-serif;
+}
+/* end contact section code */
 
 /* @media (min-width: 990px) {
     .material{
@@ -241,7 +469,7 @@
         background-size: 100%;
         background-color: #43454c;
     }
-    
+
 
 
     /* .side-nav .top-nav-box .nav-icon-box,
@@ -256,18 +484,21 @@
 @media (max-width:767px) {
     .detail-image img {
         border-radius: 10%;
-        width:50%;
+        width: 50%;
     }
+
     .detail-image {
         /* border-radius: 0; */
         /* width:50%; */
         display: flex;
         justify-content: center;
     }
-    .hero-bg .hero-bg-shadow-box .text h1{
+
+    .hero-bg .hero-bg-shadow-box .text h1 {
         font-size: 3em;
     }
-    .hero-bg .hero-bg-shadow-box .text h6{
+
+    .hero-bg .hero-bg-shadow-box .text h6 {
         font-size: 1.5em;
     }
 }

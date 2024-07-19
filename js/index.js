@@ -32,6 +32,7 @@ updateTitle()
 
 $(document).ready(function(){
     sessionStorage.removeItem("scroll_completed")
+    sessionStorage.removeItem("skillCompleted")
 })
 
 $(document).scroll(function () {
@@ -75,3 +76,60 @@ function counterAnimation() {
 }
 
 // end counter code
+
+
+//start skill section code
+
+$(document).scroll(function(){
+    if(sessionStorage.getItem("skillCompleted")==null)
+    {
+        let skillEl= document.querySelector(".skills-section-animate")
+        let getAttr= skillEl.getAttribute("class")
+        if(getAttr.indexOf("animated")!=-1){
+            skillAnimation()
+        }
+    }
+})
+
+
+function skillAnimation(){
+    $(document).ready(function(){
+        let html= $(".html").html();
+        let css= $(".css").html();
+        let javascript= $(".javascript").html();
+        let react= $(".react").html();
+        let node= $(".node").html();
+        let python= $(".python").html();
+        $(".progress-html").animate({width:html},50,function(){
+            $(".progress-css").animate({width:css},50,function(){
+                $(".progress-javascript").animate({width:javascript},50,function(){
+                    $(".progress-react").animate({width:react},50,function(){
+                        $(".progress-node").animate({width:node},50,function(){
+                            $(".progress-python").animate({width:python},50,function(){
+                                sessionStorage.setItem("skillCompleted","done")
+                            })
+                        })
+                    })
+                })
+            })
+        })
+    })
+}
+
+//start filter code for portfolio
+
+$(document).ready(function(){
+    $(".nav-box li").each(function(){
+        $(this).click(function(){
+           $(".all").hide();
+           $(".nav-box li").removeClass("active")
+           $(this).addClass("active")
+           let filter= $(this).attr("filter")
+            $("."+filter).each(function(){
+                $("."+filter).show()
+            })
+        })
+    })
+})
+
+//end filter code for portfolio
