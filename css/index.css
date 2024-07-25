@@ -238,6 +238,8 @@
 .resume-section .resume-box {
     border-left: 2px solid #149DDD;
     position: relative;
+    font-size: 16px;
+
 }
 
 .resume-section .resume-box::before {
@@ -254,6 +256,17 @@
 
 .resume-section .resume-box h4 {
     font-weight: bold;
+}
+.resume-section .resume-box h5 {
+    font-weight: bold;
+}
+.resume-section .resume-box a{
+    font-style: italic;
+    text-decoration: none;
+}
+.resume-section .resume-box strong{
+    font-style: italic;
+    font-size: 18px;
 }
 
 .resume-section .resume-box p {

@@ -9,7 +9,7 @@ togglerBtn.onclick = () => {
 }
 
 // start title animation
-let array = ["Designer      ", "Web Developer      ", "Engineer      "]
+let array = ["Full-Stack Developer      ","UI/UX Designer      ","Engineer      ","Motivator      "]
 let arrIndex = 0
 let charIndex = 0
 
@@ -102,18 +102,24 @@ function skillAnimation() {
         let sql = $(".sql").html();
         let mongo = $(".mongo").html();
         let express = $(".express").html();
+        let bootstrap = $(".bootstrap").html();
+        let next = $(".next").html();
 
         $(".progress-html").animate({ width: html }, 50, function () {
             $(".progress-css").animate({ width: css }, 50, function () {
                 $(".progress-javascript").animate({ width: javascript }, 50, function () {
                     $(".progress-react").animate({ width: react }, 50, function () {
                         $(".progress-node").animate({ width: node }, 50, function () {
-                            $(".progress-python").animate({ width: python }, 50, function () {
-                                $(".progress-aws").animate({ width: aws }, 50, function () {
-                                    $(".progress-sql").animate({ width: sql }, 50, function () {
-                                        $(".progress-mongo").animate({ width: mongo }, 50, function () {
-                                            $(".progress-express").animate({ width: express }, 50, function () {
-                                                sessionStorage.setItem("skillCompleted", "done")
+                            $(".progress-next").animate({ width: next }, 50, function () {
+                                $(".progress-python").animate({ width: python }, 50, function () {
+                                    $(".progress-aws").animate({ width: aws }, 50, function () {
+                                        $(".progress-sql").animate({ width: sql }, 50, function () {
+                                            $(".progress-mongo").animate({ width: mongo }, 50, function () {
+                                                $(".progress-express").animate({ width: express }, 50, function () {
+                                                    $(".progress-bootstrap").animate({ width: bootstrap }, 50, function () {
+                                                        sessionStorage.setItem("skillCompleted", "done")
+                                                    })
+                                                })
                                             })
                                         })
                                     })
