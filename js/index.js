@@ -9,7 +9,7 @@ togglerBtn.onclick = () => {
 }
 
 // start title animation
-let array = ["Full-Stack Developer      ","UI/UX Designer      ","Engineer      ","Motivator      "]
+let array = ["Full-Stack Developer      ", "UI/UX Designer      ", "Engineer      ", "Motivator      "]
 let arrIndex = 0
 let charIndex = 0
 
@@ -31,48 +31,48 @@ updateTitle()
 // start counter code
 
 $(document).ready(function () {
-    sessionStorage.removeItem("scroll_completed")
+    // sessionStorage.removeItem("scroll_completed")
     sessionStorage.removeItem("skillCompleted")
 })
 
-$(document).scroll(function () {
-    if (sessionStorage.getItem("scroll_completed") == null) {
-        let factEl = document.querySelector(".fact-section")
-        let getAttr = factEl.getAttribute("class")
-        if (getAttr.indexOf("animated") != -1) {
-            counterAnimation()
-        }
-    }
-})
 
-function counterAnimation() {
-    let counterEl = document.querySelectorAll(".fact-counter")
+//     if (sessionStorage.getItem("scroll_completed") == null) {
+//         let factEl = document.querySelector(".fact-section")
+//         let getAttr = factEl.getAttribute("class")
+//         if (getAttr.indexOf("animated") != -1) {
+//             counterAnimation()
+//         }
+//     }
+// })
 
-    counterEl.forEach((counter) => {
-        counter.innerText = 0
+// function counterAnimation() {
+//     let counterEl = document.querySelectorAll(".fact-counter")
 
-        function incrementCounter() {
-            let currentNum = Number(counter.innerText)
-            // console.log(typeof(currentNum))
-            let dataCell = counter.getAttribute("data-cell")
-            let number = dataCell / 6
-            // console.log(number)
-            let increment = Math.floor(number + currentNum)
-            // console.log(increment)
-            counter.innerText = increment;
-            if (increment < dataCell) {
-                setTimeout(function () {
-                    incrementCounter()
-                }, 100)
-                sessionStorage.setItem("scroll_completed", "animation")
-            }
-            else {
-                counter.innerText = dataCell
-            }
-        }
-        incrementCounter()
-    })
-}
+//     counterEl.forEach((counter) => {
+//         counter.innerText = 0
+
+//         function incrementCounter() {
+//             let currentNum = Number(counter.innerText)
+//             // console.log(typeof(currentNum))
+//             let dataCell = counter.getAttribute("data-cell")
+//             let number = dataCell / 6
+//             // console.log(number)
+//             let increment = Math.floor(number + currentNum)
+//             // console.log(increment)
+//             counter.innerText = increment;
+//             if (increment < dataCell) {
+//                 setTimeout(function () {
+//                     incrementCounter()
+//                 }, 100)
+//                 sessionStorage.setItem("scroll_completed", "animation")
+//             }
+//             else {
+//                 counter.innerText = dataCell
+//             }
+//         }
+//         incrementCounter()
+//     })
+// }
 
 // end counter code
 
