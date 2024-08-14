@@ -569,10 +569,11 @@ body{
 } */
 
 
+
 @media (max-width: 600px) {
 
     .hero-bg {
-        background-size: cover;
+        background-size: auto;
         /* background-size: 100%; */
         background-color: #fefefe;
         background-image: url(/images/IMG3.jpg);
