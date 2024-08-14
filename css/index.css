@@ -5,8 +5,8 @@
     /* font-size: 18px; */
 }
 body{
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
 }
 
 .side-nav,
@@ -70,6 +70,9 @@ body{
     opacity: 1;
 }
 
+.side-nav .top-nav-box .nav-icon-box a {
+   text-decoration: none;
+}
 .side-nav .top-nav-box .nav-icon-box i {
     padding: 8px;
     background-color: rgba(110, 110, 110, 0.588);
@@ -191,7 +194,7 @@ body{
     position: fixed;
     top: 0;
     right: 0;
-    color: #fff;
+    color: #149DDD;
     font-size: 25px;
     opacity: 0;
 }
