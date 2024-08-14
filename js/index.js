@@ -144,9 +144,38 @@ $(document).ready(function () {
             let filter = $(this).attr("filter")
             $("." + filter).each(function () {
                 $("." + filter).show()
+                return false;
             })
         })
     })
 })
 
+//expand functionality for portfolio
+let expandBtn = document.querySelectorAll(".expand-btn")
+let portfolioBox = document.querySelectorAll(".portfolio-box")
+let portfolioBoxCon = document.querySelectorAll(".portfolio-box-con")
+
+$(document).ready(function () {
+    $(".expand-btn").each(function () {
+        $(this).click(function () {
+            $(this).closest(".portfolio-box").toggleClass("expand-css")
+            $(this).closest(".portfolio-con-box").toggleClass("expand-adjust")
+            return false;
+        })
+    })
+})
+
+
 //end filter code for portfolio
+
+// side nav select functionality
+
+
+$(document).ready(function(){
+    $(".list-group-item").each(function(){
+        $(this).click(function(){
+            $(".list-group-item").removeClass("present")
+            $(this).toggleClass("present")
+        })
+    })
+})
