@@ -194,7 +194,7 @@ body{
     z-index: 999;
     position: fixed;
     top: 0;
-    right: 15%;
+    right: 0;
     color: #149DDD;
     font-size: 25px;
     opacity: 0;
