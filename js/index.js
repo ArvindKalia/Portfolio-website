@@ -9,7 +9,7 @@ togglerBtn.onclick = () => {
 }
 
 // start title animation
-let array = ["Full-Stack Developer      ", "UI/UX Designer      ", "Engineer      ","Web Developer      ","Mobile App Developer      ","Product Designer      ","Creative Technologist      "]
+let array = ["Full-Stack Developer      ", "UI/UX Designer      ", "Engineer      ", "Web Developer      ", "Mobile App Developer      ", "Product Designer      ", "Creative Technologist      "]
 let arrIndex = 0
 let charIndex = 0
 
@@ -137,7 +137,7 @@ function skillAnimation() {
 
 $(document).ready(function () {
     $(".nav-box li").each(function () {
-        $(this).bind("touchstart click",function () {
+        $(this).bind("touchstart click", function () {
             $(".nav-box li").removeClass("active")
             $(this).addClass("active")
             $(".all").hide();
@@ -157,7 +157,7 @@ let portfolioBoxCon = document.querySelectorAll(".portfolio-box-con")
 
 $(document).ready(function () {
     $(".expand-btn").each(function () {
-        $(this).bind("touchstart click",function () {
+        $(this).bind("touchstart click", function () {
             $(this).parents(".portfolio-box").toggleClass("expand-css")
             $(this).parents(".portfolio-con-box").toggleClass("expand-adjust")
             return false;
@@ -171,12 +171,13 @@ $(document).ready(function () {
 // side nav select functionality
 
 
+
 $(document).ready(function(){
-    $(".list-group-item").each(function(){
-        $(this).click(function(){
-            $(".list-group-item").removeClass("present")
-            $(this).toggleClass("present")
-            return false
-        })
+    $(".nav-list-group-item").click(function(){
+        $(".nav-list-group-item").removeClass("present")
+        $(this).addClass("present")
     })
 })
+
+
+
