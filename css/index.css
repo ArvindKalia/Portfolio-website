@@ -5,8 +5,9 @@
     /* font-size: 18px; */
 }
 body{
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
+    /* overflow-x: hidden; */
 }
 
 .side-nav,
@@ -140,7 +141,7 @@ body{
 }
 
 .hero-bg {
-    width: 100;
+    width: 100vw;
     height: 100vh;
     background-image: url(../images/hero-bg14.jpg);
     background-size: cover;
@@ -193,7 +194,7 @@ body{
     z-index: 999;
     position: fixed;
     top: 0;
-    right: 0;
+    right: 18%;
     color: #149DDD;
     font-size: 25px;
     opacity: 0;
@@ -554,9 +555,7 @@ body{
     font-size: 22px;
     font-family: sans-serif;
 }
-.contact-section .map {
-   
-}
+
 
 /* end contact section code */
 
@@ -577,10 +576,12 @@ body{
 
     .hero-bg {
         background-size: auto;
-        /* background-size: 100%; */
         background-color: #fefefe;
         background-image: url(/images/IMG3.jpg);
         transition: linear 0.1s;
+    }
+    body{
+        overflow-x: hidden;
     }
 
 
@@ -629,6 +630,7 @@ body{
         opacity: 0;
         transition: opacity 0.1s linear;
     }
+
 
 }
 

@@ -9,7 +9,7 @@ togglerBtn.onclick = () => {
 }
 
 // start title animation
-let array = ["Full-Stack Developer      ", "UI/UX Designer      ", "Engineer      ", "Motivator      "]
+let array = ["Full-Stack Developer      ", "UI/UX Designer      ", "Engineer      ","Web Developer      ","Mobile App Developer      ","Product Designer      ","Creative Technologist      "]
 let arrIndex = 0
 let charIndex = 0
 
@@ -23,7 +23,7 @@ function updateTitle() {
     if (arrIndex == array.length) {
         arrIndex = 0
     }
-    setTimeout(updateTitle, 150)
+    setTimeout(updateTitle, 130)
 
 }
 updateTitle()
