@@ -584,7 +584,9 @@ body{
         overflow-x: hidden;
     }
 
-
+    .portfolio-section ul .nav-box li{
+        margin: 0 8px;
+    }
 
 }
 
