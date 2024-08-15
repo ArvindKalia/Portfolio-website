@@ -194,7 +194,7 @@ body{
     z-index: 999;
     position: fixed;
     top: 0;
-    right: 18%;
+    right: 15%;
     color: #149DDD;
     font-size: 25px;
     opacity: 0;
@@ -583,6 +583,7 @@ body{
     body{
         overflow-x: hidden;
     }
+
 
 
 }
