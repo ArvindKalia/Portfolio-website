@@ -137,10 +137,10 @@ function skillAnimation() {
 
 $(document).ready(function () {
     $(".nav-box li").each(function () {
-        $(this).click(function () {
-            $(".all").hide();
+        $(this).bind("touchstart click",function () {
             $(".nav-box li").removeClass("active")
             $(this).addClass("active")
+            $(".all").hide();
             let filter = $(this).attr("filter")
             $("." + filter).each(function () {
                 $("." + filter).show()
@@ -157,9 +157,9 @@ let portfolioBoxCon = document.querySelectorAll(".portfolio-box-con")
 
 $(document).ready(function () {
     $(".expand-btn").each(function () {
-        $(this).click(function () {
-            $(this).closest(".portfolio-box").toggleClass("expand-css")
-            $(this).closest(".portfolio-con-box").toggleClass("expand-adjust")
+        $(this).bind("touchstart click",function () {
+            $(this).parents(".portfolio-box").toggleClass("expand-css")
+            $(this).parents(".portfolio-con-box").toggleClass("expand-adjust")
             return false;
         })
     })
@@ -176,6 +176,7 @@ $(document).ready(function(){
         $(this).click(function(){
             $(".list-group-item").removeClass("present")
             $(this).toggleClass("present")
+            return false
         })
     })
 })
